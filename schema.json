@@ -1,0 +1,714 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "name": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      },
+      "key_work": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "acmi_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "title_annotation": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "creator_credit": {
+            "type": "string"
+          },
+          "credit_line": {
+            "type": "string"
+          },
+          "headline_credit": {
+            "type": "string"
+          },
+          "thumbnail": {
+            "type": "object",
+            "properties": {
+              "image_url": {
+                "type": "string"
+              },
+              "has_video": {
+                "type": "boolean"
+              },
+              "animated_image_url": {
+                "type": "string"
+              }
+            }
+          },
+          "video_links": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "uri": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "uri"
+              ]
+            }
+          },
+          "record_type": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "is_on_display": {
+            "type": "boolean"
+          },
+          "last_on_display_place": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "last_on_display_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "is_context_indigenous": {
+            "type": "boolean"
+          },
+          "material_description": {
+            "type": "string"
+          },
+          "unpublished": {
+            "type": "boolean"
+          },
+          "external": {
+            "type": "boolean"
+          },
+          "first_production_date": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "commissioned": {
+            "type": "boolean"
+          },
+          "external_references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "source": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "slug": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "source_identifier": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "source",
+                "source_identifier"
+              ]
+            }
+          },
+          "brief_description": {
+            "type": "string"
+          },
+          "constellations_primary": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "description"
+              ]
+            }
+          },
+          "constellations_other": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "description"
+              ]
+            }
+          },
+          "recommendations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "display_name": {
+                  "type": "string"
+                },
+                "job_title": {
+                  "type": "string"
+                },
+                "avatar_image": {
+                  "type": "string"
+                },
+                "quote": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "date_created": {
+        "type": "string"
+      },
+      "date_updated": {
+        "type": "string"
+      },
+      "authors": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "full_name": {
+              "type": "string"
+            },
+            "job_title": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "full_name",
+            "job_title"
+          ]
+        }
+      },
+      "links": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "start": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "acmi_id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "title_annotation": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "creator_credit": {
+                  "type": "string"
+                },
+                "credit_line": {
+                  "type": "string"
+                },
+                "headline_credit": {
+                  "type": "string"
+                },
+                "thumbnail": {
+                  "type": "object",
+                  "properties": {
+                    "image_url": {
+                      "type": "string"
+                    },
+                    "has_video": {
+                      "type": "boolean"
+                    },
+                    "animated_image_url": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "video_links": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "uri": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "uri"
+                    ]
+                  }
+                },
+                "record_type": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "is_on_display": {
+                  "type": "boolean"
+                },
+                "last_on_display_place": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "last_on_display_date": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "is_context_indigenous": {
+                  "type": "boolean"
+                },
+                "material_description": {
+                  "type": "string"
+                },
+                "unpublished": {
+                  "type": "boolean"
+                },
+                "external": {
+                  "type": "boolean"
+                },
+                "first_production_date": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "commissioned": {
+                  "type": "boolean"
+                },
+                "external_references": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "source": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "slug": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "source_identifier": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "source",
+                      "source_identifier"
+                    ]
+                  }
+                },
+                "brief_description": {
+                  "type": "string"
+                },
+                "constellations_primary": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "description"
+                    ]
+                  }
+                },
+                "constellations_other": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "description"
+                    ]
+                  }
+                },
+                "recommendations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "display_name": {
+                        "type": "string"
+                      },
+                      "job_title": {
+                        "type": "string"
+                      },
+                      "avatar_image": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "display_name",
+                      "job_title",
+                      "avatar_image",
+                      "quote"
+                    ]
+                  }
+                }
+              }
+            },
+            "end": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "acmi_id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "title_annotation": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                },
+                "creator_credit": {
+                  "type": "string"
+                },
+                "credit_line": {
+                  "type": "string"
+                },
+                "headline_credit": {
+                  "type": "string"
+                },
+                "thumbnail": {
+                  "type": "object",
+                  "properties": {
+                    "image_url": {
+                      "type": "string"
+                    },
+                    "has_video": {
+                      "type": "boolean"
+                    },
+                    "animated_image_url": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "video_links": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "uri": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "uri"
+                    ]
+                  }
+                },
+                "record_type": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "is_on_display": {
+                  "type": "boolean"
+                },
+                "last_on_display_place": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "last_on_display_date": {
+                  "type": [
+                    "null",
+                    "string"
+                  ]
+                },
+                "is_context_indigenous": {
+                  "type": "boolean"
+                },
+                "material_description": {
+                  "type": "string"
+                },
+                "unpublished": {
+                  "type": "boolean"
+                },
+                "external": {
+                  "type": "boolean"
+                },
+                "first_production_date": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "commissioned": {
+                  "type": "boolean"
+                },
+                "external_references": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "source": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "slug": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "source_identifier": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "source",
+                      "source_identifier"
+                    ]
+                  }
+                },
+                "brief_description": {
+                  "type": "string"
+                },
+                "constellations_primary": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "description"
+                    ]
+                  }
+                },
+                "constellations_other": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "number"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "name",
+                      "description"
+                    ]
+                  }
+                },
+                "recommendations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "display_name": {
+                        "type": "string"
+                      },
+                      "job_title": {
+                        "type": "string"
+                      },
+                      "avatar_image": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "display_name",
+                      "job_title",
+                      "avatar_image",
+                      "quote"
+                    ]
+                  }
+                }
+              }
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "start",
+            "end",
+            "description"
+          ]
+        }
+      },
+      "published": {
+        "type": "boolean"
+      },
+      "shape": {
+        "type": "null"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "description",
+      "key_work",
+      "date_created",
+      "date_updated",
+      "authors",
+      "links",
+      "published",
+      "shape"
+    ]
+  }
+}

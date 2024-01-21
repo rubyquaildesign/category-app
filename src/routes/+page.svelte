@@ -26,10 +26,9 @@
   let selectedPage = 0;
   let selectedTab = 0;
   onMount(() => {
-    console.log(pages);
     groups.subscribe(async (g) => {
       await fetch('/update', {
-        method: 'PUT',
+        method: 'POST',
         body: JSON.stringify(g),
       });
     });
@@ -40,6 +39,9 @@
   <nav>
     <button disabled={selectedTab == 0} on:click={() => (selectedTab = 0)}>Constellations</button>
     <button disabled={selectedTab == 1} on:click={() => (selectedTab = 1)}>Categories</button>
+    <button disabled={selectedTab == 2} on:click={() => (selectedTab = 2)}
+      >Constellations without Category</button
+    >
   </nav>
   {#if selectedTab == 0}
     <div class="tab">
@@ -62,6 +64,31 @@
           <Constellation bind:categoryStore={$groups[item.id]} constellation={item} />
         </div>
       {/each}
+      <div>
+        <button
+          disabled={selectedPage <= 0}
+          on:click={() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            selectedPage = selectedPage - 1;
+          }}>Prev</button
+        >
+        {#each { length: pages.length } as _, i}
+          <button
+            disabled={selectedPage == i}
+            on:click={() => {
+              window.scrollTo({ top: 0, behavior: 'auto' });
+              selectedPage = i;
+            }}>{i}</button
+          >
+        {/each}
+        <button
+          disabled={selectedPage >= pages.length - 1}
+          on:click={() => {
+            window.scrollTo({ top: 0, behavior: 'auto' });
+            selectedPage = selectedPage + 1;
+          }}>next</button
+        >
+      </div>
     </div>
   {/if}
   {#if selectedTab == 1}
@@ -69,6 +96,16 @@
       <h2>Categories</h2>
       <MSelect constellationInfo={constellations} {groups} />
     </div>
+  {/if}
+  {#if selectedTab == 2}
+    {#each Object.keys($groups).filter((k) => $groups[k].length === 0) as key}
+      <div>
+        <Constellation
+          bind:categoryStore={$groups[key]}
+          constellation={constellations.find((c) => c.id == parseFloat(key))}
+        />
+      </div>
+    {/each}
   {/if}
 </main>
 

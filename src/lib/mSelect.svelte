@@ -22,7 +22,6 @@
     }))
   );
 
-  console.log(get(categoryContents));
   onMount(() => {
     categoryContents.subscribe((cat) => {
       groups.update((g) => {
@@ -47,7 +46,6 @@
       options={data}
       --sms-text-color="black"
       --sms-bg="white"
-      on:change={() => console.log(selected)}
     />
   {/each}
 </div>
